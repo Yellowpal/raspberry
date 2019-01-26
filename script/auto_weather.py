@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 import time
 import os
 
+file = '/tmp/weather_tmp.wav'
 
 def getAqi(url):
     resp = requests.get(url,)
@@ -48,7 +49,7 @@ def stringToMp3(strings_txt):
                                   'per': 0,
                                   'spd': 5})
     if not isinstance(result, dict):
-        with open('test_tmp.wav', 'wb') as f:
+        with open(file, 'wb') as f:
             f.write(result)
 
 
@@ -63,7 +64,7 @@ def main():
     text = getNow() + getWeather(w_url) + getAqi(aqi_url)
     print(text)
     stringToMp3(text)
-    os.system('aplay -D bluealsa test_tmp.wav')
+    os.system('aplay -D bluealsa ' + file)
 
 
 if __name__ == '__main__':
