@@ -45,7 +45,7 @@ def getNow():
 def stringToMp3(strings_txt):
     APPID = '9127702'
     APIKey = 'dpWei1rMPNcGrzQIejZlRa0O'
-    SecretKey = '3c6922a1ba33bc3cbc6953056cde02d8'
+    SecretKey = ''
 
     aipSpeech = AipSpeech(APPID, APIKey, SecretKey)
     result = aipSpeech.synthesis(strings_txt, 'zh', '1',
