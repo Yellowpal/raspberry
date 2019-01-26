@@ -5,6 +5,10 @@ import re
 from bs4 import BeautifulSoup
 import time
 import os
+import sys
+
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 file = '/tmp/weather_tmp.wav'
 
