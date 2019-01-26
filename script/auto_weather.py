@@ -51,7 +51,8 @@ def stringToMp3(strings_txt):
     result = aipSpeech.synthesis(strings_txt, 'zh', '1',
                                  {'vol': 8,
                                   'per': 0,
-                                  'spd': 5})
+                                  'spd': 5
+                                  'aue': 6})
     if not isinstance(result, dict):
         with open(file, 'wb') as f:
             f.write(result)
